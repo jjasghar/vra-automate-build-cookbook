@@ -6,10 +6,9 @@
 
 bash "bootstrap a tk node" do
   cwd delivery_workspace_repo
-  creates "maybe"
   code <<-EOH
   STATUS=0
-    chef exec kitchen list || STATUS=1
+    chef exec kitchen test || STATUS=1
     exit $STATUS
   EOH
 end
