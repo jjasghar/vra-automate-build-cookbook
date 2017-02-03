@@ -10,7 +10,7 @@ bash "bootstrap a tk node" do
   creates "maybe"
   code <<-EOH
   STATUS=0
-  || STATUS=1
+  chef exec kitchen list || STATUS=1
   exit $STATUS
   EOH
 end
