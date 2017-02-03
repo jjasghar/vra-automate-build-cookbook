@@ -5,12 +5,11 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 bash "bootstrap a tk node" do
-  user "root"
-  cwd "/tmp"
+  cwd delivery_workspace_repo
   creates "maybe"
   code <<-EOH
   STATUS=0
-  chef exec kitchen list || STATUS=1
-  exit $STATUS
+    chef exec kitchen list || STATUS=1
+    exit $STATUS
   EOH
 end
