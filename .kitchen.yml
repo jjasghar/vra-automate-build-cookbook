@@ -1,0 +1,26 @@
+driver:
+  name: vra
+  username: "vraadmin"
+  password: "Good1bye!"
+  tenant: vsphere.local
+  base_url: https://vra71.tirefi.re
+  verify_ssl: false
+  subtenant_id: d0fb4a04-7099-4ba1-a262-b578e129a758
+
+provisioner:
+  name: chef_zero
+  sudo_command: sudo
+
+transport:
+  username: "admini"
+  password: admini
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      catalog_id: 2d6d5481-ebb0-4bdc-8af9-b75043a86386
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chefdk::default]
