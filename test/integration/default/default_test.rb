@@ -20,4 +20,5 @@ describe file('/var/www/html/index.nginx-debian.html') do
   it { should be_file }
   it { should_not be_directory }
   its('content') { should match (%r{tirefi}) }
+  its('content') { should match (%r{vra-demo}) }
 end
