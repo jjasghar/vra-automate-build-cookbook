@@ -12,9 +12,8 @@ bash "install some vmware plugins" do
   creates "maybe"
   code <<-EOH
   STATUS=0
-  chef gem install knife-vsphere || STATUS=1
-  chef gem install knife-vrealize || STATUS=1
-  chef gem install kitchen-vra || STATUS=1
+    chef gem install knife-vrealize || STATUS=1
+    chef gem install kitchen-vra || STATUS=1
   exit $STATUS
   EOH
 end

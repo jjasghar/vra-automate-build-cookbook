@@ -18,9 +18,9 @@ transport:
 platforms:
   - name: ubuntu-14.04
     driver:
-      catalog_id: 2d6d5481-ebb0-4bdc-8af9-b75043a86386
+      catalog_id: 3f09a0f7-2511-489b-ad6d-2f293d92cd69
 
 suites:
   - name: default
     run_list:
-      - recipe[chefdk::default]
+      - recipe[vra_demo::default]
