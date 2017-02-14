@@ -11,6 +11,9 @@ provisioner:
   name: chef_zero
   sudo_command: sudo
 
+verifier:
+  name: inspec
+
 transport:
   username: "admini"
   password: admini
